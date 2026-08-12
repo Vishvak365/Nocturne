@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nocturne — Reader for Hacker News</title>
+  <meta name="description" content="An iPhone app for reading Hacker News that treats a spotty connection as the normal case, not an edge case." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="mark">N</span>
+        Nocturne
+      </a>
+      <nav class="site-links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <span class="pill">For iPhone</span>
+        <h1>Hacker News, offline&#8209;first</h1>
+        <p class="tagline">
+          Every story on the front page downloads its comments automatically in
+          the background, so the subway, a flight, or a dead zone doesn't turn
+          the app into an empty screen.
+        </p>
+
+        <div class="screens">
+          <img src="assets/home.png" alt="Nocturne's home feed, showing ranked Hacker News stories with live download-status marks" />
+          <img src="assets/comments.png" alt="A Nocturne comment thread, with the article card, meta row, and nested replies" />
+        </div>
+
+        <div class="cta-row">
+          <a class="btn ghost" href="https://github.com/Vishvak365/hackernews-offline-app">View source on GitHub</a>
+        </div>
+      </section>
+
+      <h2>What it does</h2>
+      <div class="card">
+        <ul>
+          <li><strong>Ranked home feed</strong> — Top, New, Best of Today, and a client-side "Rising" sort, pulled live from the official HN Firebase API.</li>
+          <li><strong>Every story auto-downloads its comments</strong>, right after the feed loads — not just the ones you bookmark.</li>
+          <li><strong>Bookmarking</strong> a story keeps its thread current on every future visit and protects it from ever going stale.</li>
+          <li><strong>Opening a story never disturbs what's on screen</strong> — a cached copy shows immediately while a fetch runs quietly behind it.</li>
+          <li><strong>Truncated threads are recoverable</strong> — tap a "load more" notice to fetch exactly those replies, in place.</li>
+          <li><strong>Offline is a first-class state</strong>, not an error — losing connectivity shows the last feed you had, muted and tagged, rather than a blank screen.</li>
+        </ul>
+      </div>
+
+      <h2>Free &amp; Pro</h2>
+      <p>
+        Nocturne is free, with a single $4.99 one&#8209;time unlock. No
+        subscription — there's no recurring server cost behind this app to
+        justify one. Nothing that works today moves behind the paywall; the
+        paid tier only adds capability.
+      </p>
+      <div class="card">
+        <table class="features">
+          <thead>
+            <tr><th></th><th>Free</th><th>Pro</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Feeds</td><td>Top, New, Best of Today, Rising</td><td>+ Ask HN, Show HN, Jobs</td></tr>
+            <tr><td>Auto-downloaded comments</td><td>full depth, every front-page story</td><td>same</td></tr>
+            <tr><td>Saved threads</td><td>unlimited</td><td>same</td></tr>
+            <tr><td>Saved comments</td><td>—</td><td>save an individual comment, not just its whole thread</td></tr>
+            <tr><td>Offline article reading</td><td>—</td><td>full article text, saved alongside the thread</td></tr>
+            <tr><td>Appearance</td><td>Nocturne dark, font scaling</td><td>+ AMOLED black, Hacker News (light)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Privacy, in one paragraph</h2>
+      <p>
+        Nocturne reads the public, read-only Hacker News API and nothing
+        else — no accounts, no login, no analytics, no crash reporting, no
+        third-party SDKs. Every cache is a plain file on your device. The one
+        exception is the Pro unlock itself, which goes through Apple's own
+        StoreKit and never touches a server Nocturne controls. Full details
+        on the <a href="privacy.html">Privacy Policy</a> page.
+      </p>
+
+      <div class="disclaimer">
+        Nocturne is an independent reader. Not affiliated with, endorsed by,
+        or sponsored by Y Combinator. HACKER NEWS is a trademark of Y
+        Combinator.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>&copy; 2026 Nocturne</span>
+      <nav class="site-links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
