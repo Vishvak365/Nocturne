@@ -134,6 +134,31 @@ main {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 }
 
+.pro-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  margin: 24px 0 8px;
+}
+
+.pro-item {
+  text-align: center;
+}
+
+.pro-item img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 20px;
+  border: 1px solid var(--divider);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.pro-item p {
+  margin: 12px 0 0;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
 h2 {
   font-size: 22px;
   font-weight: 600;
