@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nocturne — Reader for Hacker News</title>
+  <title>Nocturne for Hacker News</title>
   <meta name="description" content="An iPhone app for reading Hacker News that treats a spotty connection as the normal case, not an edge case." />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -33,25 +33,43 @@
           the app into an empty screen.
         </p>
 
-        <div class="screens">
-          <img src="assets/home.png" alt="Nocturne's home feed, showing ranked Hacker News stories with live download-status marks" />
-          <img src="assets/comments.png" alt="A Nocturne comment thread, with the article card, meta row, and nested replies" />
+        <div class="cta-row">
+          <a class="btn primary" href="https://apps.apple.com/us/app/nocturne-for-hacker-news/id6801647718">Download on the App Store</a>
+          <a class="btn ghost" href="#whats-new">What&#8217;s new in 1.1</a>
+        </div>
+
+        <div class="strip">
+          <img src="assets/strip.png" alt="Six App Store screenshots of Nocturne: the offline-ready home feed, comments downloading automatically, swipe-to-save articles, threaded comments with line guides, search that works offline, and the Pro features" />
         </div>
       </section>
+
+      <h2 id="whats-new">What&#8217;s new in 1.1</h2>
+      <div class="card">
+        <ul>
+          <li><strong>A welcome tour</strong> on first launch: short animated demos of the front page, offline mode, threads, and Pro, each with a &ldquo;now you try&rdquo; step on made-up posts. Replay it anytime from Settings &rarr; About.</li>
+          <li><strong>Feed chips on Home</strong> &mdash; every feed is one tap under the title, replacing the old sort menu.</li>
+          <li><strong>Comment gestures</strong> &mdash; swipe a comment right to save it, left for its actions (save, block, report). Long-press works anywhere on the comment.</li>
+          <li><strong>Clearer threads</strong> &mdash; connected line guides trace every reply back to its parent. Tap a name to fold a branch.</li>
+          <li><strong>Share</strong> a story&#8217;s Hacker News discussion from the comments screen.</li>
+          <li><strong>Faster comments</strong> &mdash; threads load in one request instead of hundreds, and what&#8217;s on screen always loads first.</li>
+          <li><strong>Subtle haptics</strong> for tabs, toggles, and swipes (on by default, switch off in Settings), and a new compass icon for &ldquo;Open in browser&rdquo;.</li>
+        </ul>
+      </div>
 
       <h2>What it does</h2>
       <div class="card">
         <ul>
-          <li><strong>Ranked home feed</strong> — Top, New, Best of Today, and a client-side "Rising" sort, pulled live from the official HN Firebase API.</li>
-          <li><strong>Every story auto-downloads its comments</strong>, right after the feed loads — not just the ones you bookmark.</li>
+          <li><strong>Ranked home feed</strong> &mdash; Top, New, Best of Today, and a client-side &ldquo;Rising&rdquo; sort, pulled live from the official HN Firebase API.</li>
+          <li><strong>Every story auto-downloads its comments</strong>, right after the feed loads &mdash; not just the ones you bookmark. A small mark under each rank shows its state: queued, downloading, or green for readable offline.</li>
           <li><strong>Bookmarking</strong> a story keeps its thread current on every future visit and protects it from ever going stale.</li>
-          <li><strong>Opening a story never disturbs what's on screen</strong> — a cached copy shows immediately while a fetch runs quietly behind it.</li>
-          <li><strong>Truncated threads are recoverable</strong> — tap a "load more" notice to fetch exactly those replies, in place.</li>
-          <li><strong>Offline is a first-class state</strong>, not an error — losing connectivity shows the last feed you had, muted and tagged, rather than a blank screen.</li>
+          <li><strong>Opening a story never disturbs what&#8217;s on screen</strong> &mdash; a cached copy shows immediately while a fetch runs quietly behind it.</li>
+          <li><strong>Truncated threads are recoverable</strong> &mdash; tap a &ldquo;load more&rdquo; notice to fetch exactly those replies, in place.</li>
+          <li><strong>Search works offline</strong> &mdash; titles, authors, and sites across everything on your phone.</li>
+          <li><strong>Offline is a first-class state</strong>, not an error &mdash; losing connectivity shows the last feed you had, muted and tagged, rather than a blank screen.</li>
         </ul>
       </div>
 
-      <h2>Free &amp; Pro</h2>
+      <h2 id="free-pro">Free &amp; Pro</h2>
       <p>
         Nocturne is free, with a single $1.99 one&#8209;time unlock. No
         subscription — there's no recurring server cost behind this app to
@@ -67,7 +85,7 @@
             <tr><td>Feeds</td><td>Top, New, Best of Today, Rising</td><td>+ Ask HN, Show HN, Jobs</td></tr>
             <tr><td>Auto-downloaded comments</td><td>full depth, every front-page story</td><td>same</td></tr>
             <tr><td>Saved threads</td><td>unlimited</td><td>same</td></tr>
-            <tr><td>Saved comments</td><td>—</td><td>save an individual comment, not just its whole thread</td></tr>
+            <tr><td>Saved comments</td><td>—</td><td>save an individual comment (swipe it right, or long-press), not just its whole thread</td></tr>
             <tr><td>Offline article reading</td><td>—</td><td>full article text — swipe a Home row, tap Reader, or turn on "Reader by default"</td></tr>
             <tr><td>Appearance</td><td>Nocturne dark, font scaling</td><td>+ AMOLED black, Hacker News (light)</td></tr>
           </tbody>
@@ -76,30 +94,31 @@
 
       <div class="pro-gallery">
         <div class="pro-item">
-          <img src="assets/swipe.gif" alt="Swiping right on a Home story to save its linked article for offline reading, with a green Save panel revealed underneath" />
-          <p>Swipe any story on Home to save its full article for offline reading.</p>
+          <img src="assets/panel-2.png" alt="Comments download as soon as the feed loads; a green mark means a story is ready to read offline" />
+          <p>Comments download as soon as the feed loads. A green mark means it&#8217;s ready offline.</p>
         </div>
         <div class="pro-item">
-          <img src="assets/reader-toggle.gif" alt="Toggling a story's live web page into Nocturne's stripped-down Reader view" />
-          <p>Reader mode strips a page down to just its text — archived, not just displayed.</p>
+          <img src="assets/panel-3.png" alt="Swiping a story right to save its full article, shown open in the offline Reader" />
+          <p>Swipe a story right to keep its full article for the offline Reader. <span class="pro-tag">PRO</span></p>
         </div>
         <div class="pro-item">
-          <img src="assets/reader.png" alt="An archived article open in Reader view, marked &quot;Saved for offline&quot;" />
-          <p>Every saved article opens instantly, even with no connection at all.</p>
+          <img src="assets/panel-4.png" alt="A comment thread with line guides tracing each reply, plus swipe actions" />
+          <p>Line guides trace every reply. Swipe a comment to save, block, or report.</p>
         </div>
         <div class="pro-item">
-          <img src="assets/saved-articles.png" alt="The Saved tab's Articles section, listing a saved article by site and title" />
-          <p>Saved articles get their own tab under Saved, so they're easy to find again.</p>
+          <img src="assets/panel-5.png" alt="Searching cached stories by title, author, and site with no network" />
+          <p>Search titles, authors, and sites with no network at all.</p>
         </div>
         <div class="pro-item">
-          <img src="assets/settings-pro.png" alt="Settings showing the &quot;Open articles in Reader by default&quot; toggle" />
-          <p>Turn on "Reader by default" and every link post opens straight to its saved text.</p>
+          <img src="assets/panel-6.png" alt="The Pro unlock: offline Reader, saved comments, Ask/Show/Jobs feeds, and two more themes" />
+          <p>One purchase unlocks Pro: Reader, saved comments, three more feeds, two more themes.</p>
         </div>
       </div>
 
       <h2>Privacy, in one paragraph</h2>
       <p>
-        Nocturne reads the public, read-only Hacker News API and nothing
+        Nocturne reads the public, read-only Hacker News and HN Search
+        (Algolia) APIs, plus the articles you choose to open, and nothing
         else — no accounts, no login, no analytics, no crash reporting, no
         third-party SDKs. Every cache is a plain file on your device. The one
         exception is the Pro unlock itself, which goes through Apple's own

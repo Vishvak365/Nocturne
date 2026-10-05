@@ -24,10 +24,10 @@
   <main>
     <div class="wrap legal">
       <h2>Privacy Policy</h2>
-      <p class="updated">Last updated: August 2026</p>
+      <p class="updated">Last updated: October 2026</p>
 
       <p>
-        Nocturne — Reader for Hacker News ("Nocturne", "the app") is built so
+        Nocturne for Hacker News ("Nocturne", "the app") is built so
         that reading Hacker News leaves your device for nothing else. This
         page describes, plainly, everything the app does and does not do
         with your data.
@@ -43,7 +43,7 @@
       <h3>What the app stores on your device</h3>
       <p>Everything Nocturne saves — bookmarked threads, automatically
       downloaded comments, saved comments, offline article copies, and your
-      settings (theme, font size, content filter, blocked users) — is stored
+      settings (theme, font size, haptics, content filter, blocked users) — is stored
       as plain files in the app's own local storage on your device. None of
       it is uploaded anywhere, synced to a server, or shared with the
       developer or any third party.</p>
@@ -55,10 +55,24 @@
           — story lists, story details, and comments. Nocturne only ever
           issues <code>GET</code> requests; there is no way to post, vote, or
           otherwise write to Hacker News from within the app.</li>
+        <li>The public
+          <a href="https://hn.algolia.com/api">HN Search API by Algolia</a>
+          (<code>hn.algolia.com</code>) — used to download a story's whole
+          comment thread in a single request. It receives the story's
+          numeric ID and, as with any web request, your IP address; Nocturne
+          sends it nothing else and requires no account or key. If it is
+          unavailable, the app falls back to the Firebase API above.</li>
         <li>The article a story links to, but only when you explicitly open
           it — either in the in-app web view or, for Pro users, when you
-          choose to save it for offline reading.</li>
+          choose to save it for offline reading. That site sees the request
+          like any other visitor's.</li>
       </ul>
+
+      <h3>Sharing</h3>
+      <p>The Share button on a comments screen opens Apple's standard share
+      sheet with a link to that story's Hacker News discussion page. What
+      happens next is up to the app or contact you choose in that sheet;
+      Nocturne itself sends nothing.</p>
 
       <h3>The Pro unlock (in-app purchase)</h3>
       <p>Nocturne Pro is a single $1.99 non-consumable purchase processed

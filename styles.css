@@ -134,6 +134,19 @@ main {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 }
 
+.strip {
+  margin: 40px -24px 0;
+  overflow-x: auto;
+}
+
+.strip img {
+  display: block;
+  width: 100%;
+  min-width: 640px;
+  border-radius: var(--radius);
+  border: 1px solid var(--divider);
+}
+
 .pro-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -147,7 +160,7 @@ main {
 
 .pro-item img {
   width: 100%;
-  max-width: 260px;
+  max-width: 240px;
   border-radius: 20px;
   border: 1px solid var(--divider);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
