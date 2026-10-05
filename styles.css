@@ -333,10 +333,109 @@ footer.site a:hover {
 }
 
 @media (max-width: 560px) {
+  .wrap {
+    padding: 0 16px;
+  }
+  header.site {
+    padding: 14px 0;
+  }
+  main {
+    padding: 32px 0 56px;
+  }
+  .hero {
+    padding-bottom: 16px;
+  }
   .hero h1 {
     font-size: 30px;
   }
+  .hero p.tagline {
+    font-size: 16px;
+  }
   nav.site-links {
-    gap: 14px;
+    gap: 6px;
+  }
+  nav.site-links a,
+  footer.site a {
+    padding: 10px 6px;
+  }
+  h2 {
+    margin: 36px 0 12px;
+  }
+  .card {
+    padding: 14px 16px;
+  }
+  .card ul {
+    padding-left: 18px;
+    margin: 0;
+  }
+  .card li {
+    margin: 8px 0;
+  }
+  /* The strip is six bridged panels: let it scroll sideways at a legible
+     size instead of squeezing it to thumbnail size. */
+  .strip {
+    margin: 28px -16px 0;
+    padding: 0 16px 8px;
+    scroll-snap-type: x proximity;
+  }
+  .strip img {
+    width: 880px;
+    max-width: none;
+    min-width: 0;
+  }
+  .pro-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 14px;
+  }
+  .pro-item p {
+    font-size: 12.5px;
+  }
+  /* Free/Pro table: one block per row, columns labeled inline. */
+  table.features,
+  table.features tbody,
+  table.features tr,
+  table.features td {
+    display: block;
+    width: 100%;
+  }
+  table.features thead {
+    display: none;
+  }
+  table.features tr {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+  table.features tr:last-child {
+    border-bottom: 0;
+  }
+  table.features td {
+    border: 0;
+    padding: 2px 0;
+  }
+  table.features td:first-child {
+    font-weight: 600;
+    padding-bottom: 4px;
+  }
+  table.features td[data-label] {
+    position: relative;
+    padding-left: 52px;
+  }
+  table.features td[data-label]::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: var(--muted-2);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  footer.site .wrap {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .legal .contact-email {
+    word-break: break-all;
   }
 }
