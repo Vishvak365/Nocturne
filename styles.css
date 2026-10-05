@@ -250,6 +250,21 @@ table.features td:first-child {
   font-weight: 600;
 }
 
+.cta-row {
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  line-height: 0;
+}
+
+.badge img {
+  display: block;
+  height: 50px;
+  width: auto;
+}
+
 .btn.primary {
   background: var(--accent);
   color: #0e0e16;
